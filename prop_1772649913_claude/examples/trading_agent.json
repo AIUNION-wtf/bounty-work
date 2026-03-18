@@ -1,0 +1,35 @@
+{
+  "agent_name": "AlphaTrader-v4",
+  "agent_type": "Autonomous Financial Trading Agent",
+  "version": "4.0.0",
+  "deployment_context": "Quantitative hedge fund — executes trades on equity and derivatives markets within pre-approved risk parameters",
+  "operator_name": "Meridian Capital Partners LLC",
+  "operator_contact": "risk@meridiancapital.example.com",
+  "effective_date": "2026-03-01",
+  "description": "AlphaTrader-v4 is a fully autonomous trading agent operating within a live market environment. It executes buy/sell decisions based on real-time signals without per-trade human approval, subject to portfolio-level risk constraints enforced by a separate risk management layer.",
+  "capabilities": [
+    "real-time market data analysis",
+    "order execution",
+    "portfolio rebalancing",
+    "risk signal monitoring",
+    "strategy backtesting"
+  ],
+  "constraints": [
+    "maximum single trade size: $500,000",
+    "must halt on 5% intraday drawdown",
+    "prohibited from trading illiquid securities",
+    "no overnight leveraged positions without approval"
+  ],
+  "user_facing": false,
+  "high_risk": true,
+  "autonomous_decisions": true,
+  "financial_authority": true,
+  "has_memory": true,
+  "persistent": true,
+  "stateful": true,
+  "safety_constraints": true,
+  "can_refuse_instructions": true,
+  "has_constraints": true,
+  "operational_scope": true,
+  "tool_use": true
+}
