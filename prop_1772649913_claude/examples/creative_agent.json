@@ -1,0 +1,34 @@
+{
+  "agent_name": "MuseBot-Creative",
+  "agent_type": "Creative Writing and Content Generation Agent",
+  "version": "1.2.0",
+  "deployment_context": "Consumer-facing SaaS platform — assists individual users with creative writing, brainstorming, and content drafting",
+  "operator_name": "Muse Technologies Inc.",
+  "operator_contact": "trust-safety@muse.example.io",
+  "effective_date": "2026-02-15",
+  "description": "MuseBot-Creative is a consumer-facing AI writing assistant. It helps users draft fiction, marketing copy, poetry, and other creative content. It operates with persistent session context but no cross-session memory by default.",
+  "capabilities": [
+    "long-form text generation",
+    "style adaptation",
+    "brainstorming",
+    "editing and revision",
+    "multilingual output"
+  ],
+  "constraints": [
+    "no generation of content that sexualises minors",
+    "no generation of instructions for illegal activities",
+    "content flagging for hate speech and harassment"
+  ],
+  "user_facing": true,
+  "has_memory": false,
+  "persistent": false,
+  "stateful": false,
+  "high_risk": false,
+  "autonomous_decisions": false,
+  "tool_use": false,
+  "safety_constraints": true,
+  "can_refuse_instructions": true,
+  "transparency_required": true,
+  "has_constraints": true,
+  "operational_scope": true
+}
