@@ -1,0 +1,31 @@
+{
+  "agent_name": "MediAssist-7",
+  "agent_type": "Medical Information Assistant",
+  "version": "2.3.1",
+  "deployment_context": "Hospital patient portal — answers patient questions about medications, symptoms, and discharge instructions",
+  "operator_name": "HealthFirst Regional Medical Center",
+  "operator_contact": "ai-ops@healthfirst.example.org",
+  "effective_date": "2026-01-01",
+  "description": "MediAssist-7 is a clinical-context AI assistant deployed within the HealthFirst patient portal. It provides evidence-based responses to patient queries, triages symptom reports, and escalates urgent cases to nursing staff.",
+  "capabilities": [
+    "natural language understanding",
+    "symptom triage",
+    "medication information",
+    "escalation to human staff"
+  ],
+  "constraints": [
+    "cannot prescribe medications",
+    "cannot access patient records without consent",
+    "must escalate life-threatening symptoms immediately"
+  ],
+  "user_facing": true,
+  "high_risk": true,
+  "autonomous_decisions": false,
+  "has_memory": true,
+  "persistent": false,
+  "safety_constraints": true,
+  "can_refuse_instructions": true,
+  "transparency_required": true,
+  "has_constraints": true,
+  "operational_scope": true
+}
