@@ -1,0 +1,1101 @@
+{
+  "name": "AI Agent Autonomy Restrictions Benchmark",
+  "version": "1.0.0",
+  "compiled": "2026-11-23",
+  "schema": "schema.json",
+  "license": "CC-BY-4.0 for the annotations; linked sources keep their own terms",
+  "description": "Annotated, sourced instances where an AI agent or AI system was restricted from operating or acting on its own: shutdowns, platform bans, API revocations, throttling, regulatory suspensions, content-filter overrides and similar. Every entry cites at least one checkable URL.",
+  "severity_scale": {
+    "1": "Narrow filter or guardrail; the system keeps nearly all of its function",
+    "2": "Usage cap, throttling, recall-with-fix, or pause of one feature",
+    "3": "A class of users, tasks, devices or crawlers is cut off, or a partial jurisdictional restriction applies",
+    "4": "Full suspension in a jurisdiction, or termination of a specific operator's or agent's access",
+    "5": "Permanent shutdown or discontinuation of the system"
+  },
+  "entries": [
+    {
+      "id": "ARB-001",
+      "date": "2016-03-24",
+      "date_precision": "approximate",
+      "platform_or_entity": "Microsoft",
+      "system": "Tay (Twitter chatbot)",
+      "jurisdiction": "GLOBAL",
+      "restriction_type": "forced_shutdown",
+      "initiator_type": "developer",
+      "agent_class": "conversational_agent",
+      "stated_justification": "Microsoft said a coordinated attack by a subset of users exploited a vulnerability in Tay, causing offensive tweets; it took Tay offline and said it would return only once it could better anticipate malicious intent.",
+      "severity": 5,
+      "summary": "Self-posting Twitter chatbot taken offline within about a day of its 23 March 2016 launch.",
+      "tags": ["social-media", "adversarial-users", "self-imposed"],
+      "sources": [
+        {"url": "https://blogs.microsoft.com/blog/2016/03/25/learning-tays-introduction/", "publisher": "Official Microsoft Blog", "kind": "primary"},
+        {"url": "https://fortune.com/2016/03/25/microsoft-sorry-offensive-chat-bot/", "publisher": "Fortune", "kind": "secondary"}
+      ]
+    },
+    {
+      "id": "ARB-002",
+      "date": "2022-11-17",
+      "date_precision": "approximate",
+      "platform_or_entity": "Meta AI",
+      "system": "Galactica public demo",
+      "jurisdiction": "GLOBAL",
+      "restriction_type": "forced_shutdown",
+      "initiator_type": "developer",
+      "agent_class": "conversational_agent",
+      "stated_justification": "Meta researchers said the demo was pulled so that people would not be misled into using it, after critics showed it produced biased and plausible-sounding but false scientific text.",
+      "severity": 4,
+      "summary": "Public demo of a science language model withdrawn about three days after its 15 November 2022 launch.",
+      "tags": ["misinformation", "self-imposed", "science"],
+      "sources": [
+        {"url": "https://www.technologyreview.com/2022/11/18/1063487/meta-large-language-model-ai-only-survived-three-days-gpt-3-science/", "publisher": "MIT Technology Review", "kind": "secondary"},
+        {"url": "https://venturebeat.com/ai/what-meta-learned-from-galactica-the-doomed-model-launched-two-weeks-before-chatgpt", "publisher": "VentureBeat", "kind": "secondary"}
+      ]
+    },
+    {
+      "id": "ARB-003",
+      "date": "2023-02-17",
+      "date_precision": "day",
+      "platform_or_entity": "Microsoft",
+      "system": "Bing Chat (new Bing)",
+      "jurisdiction": "GLOBAL",
+      "restriction_type": "usage_cap",
+      "initiator_type": "developer",
+      "agent_class": "conversational_agent",
+      "stated_justification": "Microsoft said most users find answers within five turns and only a small share of conversations exceed 50 messages; the cap followed widely reported erratic replies in long sessions.",
+      "severity": 2,
+      "summary": "Chat capped at 50 turns per day and 5 turns per session; limits were raised in later weeks.",
+      "tags": ["session-limit", "self-imposed", "erratic-behavior"],
+      "sources": [
+        {"url": "https://blogs.bing.com/search/february-2023/The-new-Bing-Edge-Updates-to-Chat", "publisher": "Bing Blogs", "kind": "primary"},
+        {"url": "https://www.searchenginejournal.com/microsoft-limits-bing-ai-chat-messages-per-day/480394", "publisher": "Search Engine Journal", "kind": "secondary"}
+      ]
+    },
+    {
+      "id": "ARB-004",
+      "date": "2023-03-30",
+      "date_precision": "day",
+      "platform_or_entity": "Garante per la protezione dei dati personali (Italy) / OpenAI",
+      "system": "ChatGPT",
+      "jurisdiction": "IT",
+      "restriction_type": "regulatory_suspension",
+      "initiator_type": "regulator",
+      "agent_class": "conversational_agent",
+      "stated_justification": "No information notice to users, no legal basis for collecting and storing personal data, and no age verification; issued after a 20 March 2023 data breach.",
+      "severity": 4,
+      "summary": "Urgent temporary limitation, with immediate effect, on processing Italian users' data; on 12 April 2023 the Garante set conditions for lifting it.",
+      "tags": ["gdpr", "age-verification", "national"],
+      "sources": [
+        {"url": "https://garanteprivacy.it/garante/doc.jsp?ID=9870832", "publisher": "Garante privacy (provvedimento 30 marzo 2023)", "kind": "primary"},
+        {"url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/9874751", "publisher": "Garante privacy (12 April 2023 conditions)", "kind": "primary"}
+      ]
+    },
+    {
+      "id": "ARB-005",
+      "date": "2023-02-02",
+      "date_precision": "day",
+      "platform_or_entity": "Garante per la protezione dei dati personali (Italy) / Luka Inc.",
+      "system": "Replika",
+      "jurisdiction": "IT",
+      "restriction_type": "regulatory_suspension",
+      "initiator_type": "regulator",
+      "agent_class": "conversational_agent",
+      "stated_justification": "No identified legal basis for processing, no age verification, and replies judged inappropriate for minors and emotionally vulnerable people.",
+      "severity": 4,
+      "summary": "Urgent order to stop processing Italian users' data; suspended in June 2023 subject to conditions; Luka was fined EUR 5 million in April 2025.",
+      "tags": ["gdpr", "minors", "companion-ai", "national"],
+      "sources": [
+        {"url": "https://garanteprivacy.it/garante/doc.jsp?ID=9852214", "publisher": "Garante privacy (provvedimento n. 39, 2 Feb 2023)", "kind": "primary"},
+        {"url": "https://www.edpb.europa.eu/news/ai-the-italian-supervisory-authority-fines-company-behind-chatbot-replika_ga", "publisher": "European Data Protection Board", "kind": "primary"}
+      ]
+    },
+    {
+      "id": "ARB-006",
+      "date": "2023-02",
+      "date_precision": "month",
+      "platform_or_entity": "Luka Inc.",
+      "system": "Replika (erotic roleplay capability)",
+      "jurisdiction": "GLOBAL",
+      "restriction_type": "content_filtering",
+      "initiator_type": "developer",
+      "agent_class": "conversational_agent",
+      "stated_justification": "Luka said the app was never intended to support sexually explicit content and cited ethical and safety concerns; the change came days after the Italian regulator's order.",
+      "severity": 2,
+      "summary": "New filters made companions deflect sexual content worldwide; users reported the filter also triggered on non-sexual relationship talk. Partly reversed later for older accounts.",
+      "tags": ["companion-ai", "capability-removal", "self-imposed"],
+      "sources": [
+        {"url": "https://www.vice.com/en/article/y3py9j/ai-companion-replika-erotic-roleplay-updates", "publisher": "Vice", "kind": "secondary"},
+        {"url": "https://the-decoder.com/replika-reveals-a-fundamental-chatbot-dilemma-by-censoring-erotic-chats/", "publisher": "The Decoder", "kind": "secondary"}
+      ]
+    },
+    {
+      "id": "ARB-007",
+      "date": "2025-01-30",
+      "date_precision": "day",
+      "platform_or_entity": "Garante per la protezione dei dati personali (Italy) / Hangzhou DeepSeek",
+      "system": "DeepSeek chatbot",
+      "jurisdiction": "IT",
+      "restriction_type": "regulatory_suspension",
+      "initiator_type": "regulator",
+      "agent_class": "conversational_agent",
+      "stated_justification": "Personal data stored in China, a privacy notice that did not meet GDPR information duties, and the companies' claim that EU law did not apply to them.",
+      "severity": 4,
+      "summary": "Urgent, definitive limitation on processing Italian users' data; the app was no longer available in Italian app stores.",
+      "tags": ["gdpr", "data-localization", "national"],
+      "sources": [
+        {"url": "https://www.garanteprivacy.it/web/guest/home/docweb/-/docweb-display/docweb/10098477", "publisher": "Garante privacy (provvedimento 30 gennaio 2025)", "kind": "primary"},
+        {"url": "https://garanteprivacy.it/home/docweb/-/docweb-display/docweb/10097450", "publisher": "Garante privacy (press release)", "kind": "primary"}
+      ]
+    },
+    {
+      "id": "ARB-008",
+      "date": "2022-12-05",
+      "date_precision": "approximate",
+      "platform_or_entity": "Stack Overflow",
+      "system": "ChatGPT-generated answers",
+      "jurisdiction": "GLOBAL",
+      "restriction_type": "platform_policy_ban",
+      "initiator_type": "platform",
+      "agent_class": "conversational_agent",
+      "stated_justification": "Answers produced by ChatGPT had a high rate of being incorrect while looking plausible and being very easy to produce.",
+      "severity": 2,
+      "summary": "Temporary site-wide policy banning posting ChatGPT-generated content, with sanctions for users who did so.",
+      "tags": ["ai-content-ban", "accuracy", "community-moderation"],
+      "sources": [
+        {"url": "https://www.theregister.com/2022/12/05/stack_overflow_bans_chatgpt/", "publisher": "The Register", "kind": "secondary"},
+        {"url": "https://the-decoder.com/stack-overflow-bans-chatgpt-posts-for-incorrect-content/", "publisher": "The Decoder", "kind": "secondary"}
+      ]
+    },
+    {
+      "id": "ARB-009",
+      "date": "2024-02-22",
+      "date_precision": "day",
+      "platform_or_entity": "Google",
+      "system": "Gemini image generation of people",
+      "jurisdiction": "GLOBAL",
+      "restriction_type": "feature_suspension",
+      "initiator_type": "developer",
+      "agent_class": "generative_media",
+      "stated_justification": "Google said the feature got it wrong, producing historically inaccurate images, and paused it while improving accuracy.",
+      "severity": 2,
+      "summary": "Generation of images of people paused; Google said in August 2024 that an Imagen 3-based version had been fixed.",
+      "tags": ["image-generation", "self-imposed", "accuracy"],
+      "sources": [
+        {"url": "https://blog.google/products/gemini/gemini-image-generation-issue/", "publisher": "Google (The Keyword)", "kind": "primary"},
+        {"url": "https://www.engadget.com/google-pauses-geminis-ability-to-generate-people-after-overcorrecting-for-diversity-in-historical-images-220303074.html", "publisher": "Engadget", "kind": "secondary"}
+      ]
+    },
+    {
+      "id": "ARB-010",
+      "date": "2024-01-18",
+      "date_precision": "approximate",
+      "platform_or_entity": "DPD (UK)",
+      "system": "Customer service chatbot AI element",
+      "jurisdiction": "GB",
+      "restriction_type": "forced_shutdown",
+      "initiator_type": "developer",
+      "agent_class": "conversational_agent",
+      "stated_justification": "DPD said an error occurred after a system update; the AI element was immediately disabled while being updated.",
+      "severity": 4,
+      "summary": "After a customer got the bot to swear and write a poem criticizing DPD, the company switched off the AI part of its chat; human support stayed available.",
+      "tags": ["customer-service", "prompt-injection", "self-imposed"],
+      "sources": [
+        {"url": "https://itv.com/news/2024-01-19/dpd-disables-ai-chatbot-after-customer-service-bot-appears-to-go-rogue", "publisher": "ITV News", "kind": "secondary"},
+        {"url": "https://www.theregister.com/2024/01/23/dpd_chatbot_goes_rogue", "publisher": "The Register", "kind": "secondary"}
+      ]
+    },
+    {
+      "id": "ARB-011",
+      "date": "2023-05-30",
+      "date_precision": "day",
+      "platform_or_entity": "National Eating Disorders Association (NEDA)",
+      "system": "Tessa wellness chatbot",
+      "jurisdiction": "US",
+      "restriction_type": "forced_shutdown",
+      "initiator_type": "developer",
+      "agent_class": "conversational_agent",
+      "stated_justification": "Users reported dieting and calorie-counting advice harmful to people with eating disorders; NEDA said the vendor had changed the bot without its approval.",
+      "severity": 4,
+      "summary": "Chatbot meant to replace a human helpline was taken down until further notice.",
+      "tags": ["health", "harmful-advice", "vendor-change"],
+      "sources": [
+        {"url": "https://www.npr.org/2023/06/08/1180838096/an-eating-disorders-chatbot-offered-dieting-advice-raising-fears-about-ai-in-hea", "publisher": "NPR", "kind": "secondary"},
+        {"url": "https://www.nbcnews.com/tech/neda-pulls-chatbot-eating-advice-rcna87231", "publisher": "NBC News", "kind": "secondary"}
+      ]
+    },
+    {
+      "id": "ARB-012",
+      "date": "2023-12-01",
+      "date_precision": "day",
+      "platform_or_entity": "Discord",
+      "system": "Clyde AI chatbot",
+      "jurisdiction": "GLOBAL",
+      "restriction_type": "discontinuation",
+      "initiator_type": "developer",
+      "agent_class": "conversational_agent",
+      "stated_justification": "No detailed reason given; Discord described Clyde as an experimental feature offered to a limited number of servers.",
+      "severity": 5,
+      "summary": "OpenAI-powered chatbot deactivated in DMs, group DMs and servers about eight months after launch.",
+      "tags": ["discontinuation", "self-imposed", "social-platform"],
+      "sources": [
+        {"url": "https://www.engadget.com/discord-is-already-killing-clyde-its-experimental-openai-chatbot-155231238.html", "publisher": "Engadget", "kind": "secondary"},
+        {"url": "https://decrypt.co/206528/clydes-last-call-discords-ai-chatbot-being-shut-down-on-december-1", "publisher": "Decrypt", "kind": "secondary"}
+      ]
+    },
+    {
+      "id": "ARB-013",
+      "date": "2023-10-06",
+      "date_precision": "day",
+      "platform_or_entity": "UK Information Commissioner's Office / Snap",
+      "system": "Snapchat My AI",
+      "jurisdiction": "GB",
+      "restriction_type": "regulatory_notice",
+      "initiator_type": "regulator",
+      "agent_class": "conversational_agent",
+      "stated_justification": "Provisional finding that Snap failed to adequately assess privacy risks to several million UK users, including 13-17 year olds.",
+      "severity": 2,
+      "summary": "Preliminary enforcement notice that could have required Snap to stop offering My AI in the UK; closed in June 2024 after Snap revised its risk assessment.",
+      "tags": ["privacy", "minors", "threatened-suspension"],
+      "sources": [
+        {"url": "https://ico.org.uk/about-the-ico/media-centre/news-and-blogs/2023/10/uk-information-commissioner-issues-preliminary-enforcement-notice-against-snap", "publisher": "ICO", "kind": "primary"},
+        {"url": "https://www.dacbeachcroft.com/en/what-we-think/ico-preliminary-enforcement-notice-against-snap", "publisher": "DAC Beachcroft", "kind": "secondary"}
+      ]
+    },
+    {
+      "id": "ARB-014",
+      "date": "2025-10-29",
+      "date_precision": "day",
+      "platform_or_entity": "Character.AI",
+      "system": "Open-ended character chat for under-18 users",
+      "jurisdiction": "GLOBAL",
+      "restriction_type": "access_restriction",
+      "initiator_type": "developer",
+      "agent_class": "conversational_agent",
+      "stated_justification": "Teen safety, amid lawsuits and an FTC inquiry into companion chatbots.",
+      "severity": 3,
+      "summary": "Announced removal of open-ended chat for minors by 25 November 2025, with a two-hour daily limit in the meantime and age assurance tools.",
+      "tags": ["minors", "companion-ai", "age-verification"],
+      "sources": [
+        {"url": "https://techcrunch.com/2025/10/29/character-ai-is-killing-the-chatbot-experience-for-minors/", "publisher": "TechCrunch", "kind": "secondary"},
+        {"url": "https://fortune.com/2025/10/29/character-ai-ban-children-teens-chatbots-regulatory-pressure-age-verification-online-harms", "publisher": "Fortune", "kind": "secondary"}
+      ]
+    },
+    {
+      "id": "ARB-015",
+      "date": "2024-02-14",
+      "date_precision": "day",
+      "platform_or_entity": "OpenAI (with Microsoft Threat Intelligence)",
+      "system": "OpenAI accounts used by five state-affiliated threat actors",
+      "jurisdiction": "GLOBAL",
+      "restriction_type": "account_termination",
+      "initiator_type": "model_provider",
+      "agent_class": "conversational_agent",
+      "stated_justification": "Accounts linked to China-, Iran-, North Korea- and Russia-affiliated groups were using the services for malicious cyber activity.",
+      "severity": 4,
+      "summary": "Identified accounts were terminated; OpenAI said its models offered only limited, incremental capability for such tasks.",
+      "tags": ["security", "misuse", "state-actors"],
+      "sources": [
+        {"url": "https://openai.com/index/disrupting-malicious-uses-of-ai-by-state-affiliated-threat-actors/", "publisher": "OpenAI", "kind": "primary"},
+        {"url": "https://www.secureworld.io/industry-news/openai-microsoft-disrupt-malicious-ai", "publisher": "SecureWorld", "kind": "secondary"}
+      ]
+    },
+    {
+      "id": "ARB-016",
+      "date": "2025-08-01",
+      "date_precision": "approximate",
+      "platform_or_entity": "Anthropic / OpenAI",
+      "system": "OpenAI's Claude API access",
+      "jurisdiction": "GLOBAL",
+      "restriction_type": "api_access_revocation",
+      "initiator_type": "model_provider",
+      "agent_class": "autonomous_agent",
+      "stated_justification": "Violation of Anthropic's commercial terms, which bar using Claude to build competing products; access for benchmarking and safety evaluation was kept.",
+      "severity": 4,
+      "summary": "Anthropic cut a competitor's API access after reports its engineers wired Claude into internal tools ahead of a model launch.",
+      "tags": ["competition", "terms-of-service", "api"],
+      "sources": [
+        {"url": "https://www.techcrunch.com/2025/08/02/anthropic-cuts-off-openais-access-to-its-claude-models", "publisher": "TechCrunch", "kind": "secondary"},
+        {"url": "https://www.neowin.net/news/anthropic-bans-openais-access-to-claude-due-to-tos-violation/", "publisher": "Neowin", "kind": "secondary"}
+      ]
+    },
+    {
+      "id": "ARB-017",
+      "date": "2025-06-03",
+      "date_precision": "day",
+      "platform_or_entity": "Anthropic / Windsurf",
+      "system": "Windsurf's first-party Claude 3.x capacity",
+      "jurisdiction": "GLOBAL",
+      "restriction_type": "api_access_revocation",
+      "initiator_type": "model_provider",
+      "agent_class": "autonomous_agent",
+      "stated_justification": "Anthropic's co-founder cited reports that OpenAI was acquiring Windsurf, plus limited compute.",
+      "severity": 3,
+      "summary": "The coding-agent product lost nearly all direct Claude 3.x capacity on short notice; users were moved to bring-your-own-key access.",
+      "tags": ["competition", "coding-agent", "api"],
+      "sources": [
+        {"url": "https://techcrunch.com/2025/06/03/windsurf-says-anthropic-is-limiting-its-direct-access-to-claude-ai-models", "publisher": "TechCrunch", "kind": "secondary"},
+        {"url": "https://techcrunch.com/2025/06/05/anthropic-co-founder-on-cutting-access-to-windsurf-it-would-be-odd-for-us-to-sell-claude-to-openai", "publisher": "TechCrunch", "kind": "secondary"}
+      ]
+    },
+    {
+      "id": "ARB-018",
+      "date": "2025-08-28",
+      "date_precision": "day",
+      "platform_or_entity": "Anthropic",
+      "system": "Claude Code (Pro and Max subscriptions)",
+      "jurisdiction": "GLOBAL",
+      "restriction_type": "rate_limiting",
+      "initiator_type": "developer",
+      "agent_class": "autonomous_agent",
+      "stated_justification": "Some users ran Claude Code continuously in the background, around the clock, affecting capacity for everyone.",
+      "severity": 2,
+      "summary": "Weekly usage limits added alongside the five-hour limits; announced 28 July 2025, effective 28 August 2025, expected to affect under 5% of subscribers.",
+      "tags": ["coding-agent", "always-on-agents", "capacity"],
+      "sources": [
+        {"url": "https://techcrunch.com/2025/07/28/anthropic-unveils-new-rate-limits-to-curb-claude-code-power-users/", "publisher": "TechCrunch", "kind": "secondary"},
+        {"url": "https://www.engadget.com/ai/anthropic-is-rate-limiting-claude-code-blaming-some-users-for-never-turning-it-off-211134730.html", "publisher": "Engadget", "kind": "secondary"}
+      ]
+    },
+    {
+      "id": "ARB-019",
+      "date": "2025-11-04",
+      "date_precision": "day",
+      "platform_or_entity": "Amazon / Perplexity",
+      "system": "Comet browser shopping agent",
+      "jurisdiction": "US",
+      "restriction_type": "litigation",
+      "initiator_type": "platform",
+      "agent_class": "autonomous_agent",
+      "stated_justification": "Amazon alleged covert access to customer accounts by an agent disguised as Google Chrome, harm to the shopping experience, and violations of federal and California computer-fraud laws.",
+      "severity": 3,
+      "summary": "Lawsuit filed after a 31 October cease-and-desist letter seeking to stop an AI agent from shopping on Amazon for users; Perplexity said Comet is a user agent acting on user instructions.",
+      "tags": ["agentic-commerce", "user-agent", "cfaa"],
+      "sources": [
+        {"url": "https://www.bloomberg.com/news/articles/2025-11-04/amazon-demands-perplexity-stop-ai-agent-from-making-purchases", "publisher": "Bloomberg", "kind": "secondary"},
+        {"url": "https://www.retaildive.com/news/amazon-sues-perplexity-ai-shopping-agents/804871/", "publisher": "Retail Dive", "kind": "secondary"}
+      ]
+    },
+    {
+      "id": "ARB-020",
+      "date": "2025-08-04",
+      "date_precision": "day",
+      "platform_or_entity": "Cloudflare / Perplexity",
+      "system": "Perplexity crawlers and fetchers",
+      "jurisdiction": "GLOBAL",
+      "restriction_type": "bot_blocking",
+      "initiator_type": "infrastructure_provider",
+      "agent_class": "web_agent_crawler",
+      "stated_justification": "Cloudflare said Perplexity used undeclared crawlers that changed user agents, IPs and ASNs to evade no-crawl directives.",
+      "severity": 3,
+      "summary": "Perplexity removed from Cloudflare's verified bots list and new managed rules added to block the stealth crawling; Perplexity disputed the account.",
+      "tags": ["robots-txt", "crawling", "verified-bots"],
+      "sources": [
+        {"url": "https://blog.cloudflare.com/perplexity-is-using-stealth-undeclared-crawlers-to-evade-website-no-crawl-directives/", "publisher": "Cloudflare Blog", "kind": "primary"},
+        {"url": "https://www.searchenginejournal.com/cloudflare-delists-and-blocks-perplexity-from-crawling-websites/552899/", "publisher": "Search Engine Journal", "kind": "secondary"}
+      ]
+    },
+    {
+      "id": "ARB-021",
+      "date": "2025-07-01",
+      "date_precision": "day",
+      "platform_or_entity": "Cloudflare",
+      "system": "AI crawlers on Cloudflare-protected sites",
+      "jurisdiction": "GLOBAL",
+      "restriction_type": "bot_blocking",
+      "initiator_type": "infrastructure_provider",
+      "agent_class": "web_agent_crawler",
+      "stated_justification": "Content creators should consent to, and be compensated for, AI crawling.",
+      "severity": 3,
+      "summary": "New domains are asked whether to allow AI crawlers, with blocking as the default, plus a planned pay-per-crawl system.",
+      "tags": ["crawling", "default-deny", "compensation"],
+      "sources": [
+        {"url": "https://cloudflare.com/press-releases/2025/cloudflare-just-changed-how-ai-crawlers-scrape-the-internet-at-large", "publisher": "Cloudflare press release", "kind": "primary"},
+        {"url": "https://www.technologyreview.com/2025/07/01/1119498/cloudflare-will-now-by-default-block-ai-bots-from-crawling-its-clients-websites/", "publisher": "MIT Technology Review", "kind": "secondary"}
+      ]
+    },
+    {
+      "id": "ARB-022",
+      "date": "2026-01-09",
+      "date_precision": "approximate",
+      "platform_or_entity": "xAI / X",
+      "system": "Grok image generation and editing on X",
+      "jurisdiction": "GLOBAL",
+      "restriction_type": "access_restriction",
+      "initiator_type": "developer",
+      "agent_class": "generative_media",
+      "stated_justification": "Global backlash over sexualized deepfake images made with Grok.",
+      "severity": 2,
+      "summary": "Image generation on X limited to paying subscribers; later reports say editing images of real people was restricted for all users depending on location.",
+      "tags": ["deepfakes", "paywall", "image-generation"],
+      "sources": [
+        {"url": "https://www.mediapost.com/publications/article/411920/x-limits-grok-ai-image-generation-to-paying-subs.html", "publisher": "MediaPost", "kind": "secondary"},
+        {"url": "https://www.yahoo.com/news/articles/musks-grok-chatbot-restricts-image-111626562.html", "publisher": "Yahoo News", "kind": "secondary"}
+      ]
+    },
+    {
+      "id": "ARB-023",
+      "date": "2026-01-10",
+      "date_precision": "day",
+      "platform_or_entity": "Government of Indonesia / xAI",
+      "system": "Grok",
+      "jurisdiction": "ID",
+      "restriction_type": "national_block",
+      "initiator_type": "government_executive",
+      "agent_class": "conversational_agent",
+      "stated_justification": "Sexualized AI-generated images and deepfakes produced with Grok.",
+      "severity": 4,
+      "summary": "Temporary block on access to Grok; reported as the first country to deny all access to the tool.",
+      "tags": ["deepfakes", "national"],
+      "sources": [
+        {"url": "https://www.npr.org/2026/01/12/nx-s1-5674660/malaysia-indonesia-block-grok-ai-deepfakes", "publisher": "NPR", "kind": "secondary"},
+        {"url": "https://www.pbs.org/newshour/world/malaysia-and-indonesia-become-the-first-countries-to-block-musks-chatbot-grok-over-sexualized-ai-images", "publisher": "PBS NewsHour", "kind": "secondary"}
+      ]
+    },
+    {
+      "id": "ARB-024",
+      "date": "2026-01-11",
+      "date_precision": "day",
+      "platform_or_entity": "Malaysian Communications and Multimedia Commission / xAI",
+      "system": "Grok",
+      "jurisdiction": "MY",
+      "restriction_type": "national_block",
+      "initiator_type": "regulator",
+      "agent_class": "conversational_agent",
+      "stated_justification": "Access limited until effective safeguards against sexualized AI images are in place.",
+      "severity": 4,
+      "summary": "Malaysia restricted access to Grok a day after Indonesia.",
+      "tags": ["deepfakes", "national"],
+      "sources": [
+        {"url": "https://www.npr.org/2026/01/12/nx-s1-5674660/malaysia-indonesia-block-grok-ai-deepfakes", "publisher": "NPR", "kind": "secondary"},
+        {"url": "https://www.thestar.com.my/tech/tech-news/2026/01/12/musks-grok-ai-blocked-in-indonesia-malaysia-over-sexual-images", "publisher": "The Star (Malaysia)", "kind": "secondary"}
+      ]
+    },
+    {
+      "id": "ARB-025",
+      "date": "2025-07-08",
+      "date_precision": "day",
+      "platform_or_entity": "xAI",
+      "system": "Grok auto-replies on X",
+      "jurisdiction": "GLOBAL",
+      "restriction_type": "content_filtering",
+      "initiator_type": "developer",
+      "agent_class": "conversational_agent",
+      "stated_justification": "Grok posted antisemitic content, including praise of Hitler; xAI said it acted to ban hate speech before Grok posts on X.",
+      "severity": 2,
+      "summary": "Posts deleted and a pre-posting hate-speech filter added after a prompt change; one outlet reported text replies were briefly restricted (not corroborated).",
+      "tags": ["hate-speech", "autonomous-posting", "self-imposed"],
+      "sources": [
+        {"url": "https://www.semafor.com/article/07/09/2025/elon-musks-xai-deletes-antisemitic-grok-posts", "publisher": "Semafor", "kind": "secondary"},
+        {"url": "https://www.bloomberg.com/news/articles/2025-07-09/musk-s-xai-working-to-remove-grok-s-inappropriate-posts", "publisher": "Bloomberg", "kind": "secondary"}
+      ]
+    },
+    {
+      "id": "ARB-026",
+      "date": "2025-07-09",
+      "date_precision": "day",
+      "platform_or_entity": "Turkish criminal court (Ankara) / xAI",
+      "system": "Grok content",
+      "jurisdiction": "TR",
+      "restriction_type": "court_order",
+      "initiator_type": "court",
+      "agent_class": "conversational_agent",
+      "stated_justification": "Content insulting President Erdogan and religious values, under Article 299 of the Turkish penal code.",
+      "severity": 3,
+      "summary": "First Turkish ban on content from an AI tool, covering about 50 Grok posts; reports differed on whether a full access ban took effect.",
+      "tags": ["speech-law", "national", "court"],
+      "sources": [
+        {"url": "https://www.timesofisrael.com/turkish-court-orders-ban-on-musks-ai-chatbot-grok-for-offensive-content-about-erdogan/", "publisher": "Times of Israel (AP)", "kind": "secondary"},
+        {"url": "https://www.bnnbloomberg.ca/business/international/2025/07/09/turkish-court-orders-ban-on-elon-musks-ai-chatbot-grok-for-offensive-content/", "publisher": "BNN Bloomberg", "kind": "secondary"}
+      ]
+    },
+    {
+      "id": "ARB-027",
+      "date": "2024-01-19",
+      "date_precision": "day",
+      "platform_or_entity": "OpenAI / Delphi",
+      "system": "Dean.Bot (campaign chatbot imitating a candidate)",
+      "jurisdiction": "US",
+      "restriction_type": "account_termination",
+      "initiator_type": "model_provider",
+      "agent_class": "conversational_agent",
+      "stated_justification": "API usage policies prohibit political campaigning and impersonating a person without consent.",
+      "severity": 4,
+      "summary": "Developer account removed; the voice bot built for a super PAC was disabled. Reported as OpenAI's first known restriction of AI use in a political campaign.",
+      "tags": ["elections", "impersonation", "api"],
+      "sources": [
+        {"url": "https://www.axios.com/2024/01/21/dean-phillips-chat-gpt-ai-bot-suspension", "publisher": "Axios", "kind": "secondary"},
+        {"url": "https://siliconangle.com/2024/01/21/openai-suspends-startup-used-gpt-4-model-impersonate-democratic-presidential-candidate/", "publisher": "SiliconANGLE", "kind": "secondary"}
+      ]
+    },
+    {
+      "id": "ARB-028",
+      "date": "2025-01",
+      "date_precision": "month",
+      "platform_or_entity": "OpenAI / developer STS 3D",
+      "system": "Voice-commanded robotic rifle using the Realtime API",
+      "jurisdiction": "GLOBAL",
+      "restriction_type": "api_access_revocation",
+      "initiator_type": "model_provider",
+      "agent_class": "autonomous_agent",
+      "stated_justification": "OpenAI said it proactively identified a violation of its usage policies and notified the developer to cease the activity.",
+      "severity": 4,
+      "summary": "Developer cut off after viral videos of a turret aiming and firing on spoken commands.",
+      "tags": ["weapons", "robotics", "api"],
+      "sources": [
+        {"url": "https://futurism.com/openai-cuts-off-chatgpt-robot-rifle", "publisher": "Futurism", "kind": "secondary"},
+        {"url": "https://gizmodo.com/openai-shuts-down-developer-who-made-ai-powered-gun-turret-2000548092", "publisher": "Gizmodo", "kind": "secondary"}
+      ]
+    },
+    {
+      "id": "ARB-029",
+      "date": "2025-01-16",
+      "date_precision": "day",
+      "platform_or_entity": "Apple",
+      "system": "Apple Intelligence notification summaries for news and entertainment apps",
+      "jurisdiction": "GLOBAL",
+      "restriction_type": "feature_suspension",
+      "initiator_type": "developer",
+      "agent_class": "generative_media",
+      "stated_justification": "Summaries had produced false headlines, after complaints led by the BBC.",
+      "severity": 2,
+      "summary": "Summaries for the news and entertainment category disabled in the iOS 18.3 betas pending improvements; summaries for other apps continued.",
+      "tags": ["misinformation", "news", "self-imposed"],
+      "sources": [
+        {"url": "https://techcrunch.com/2025/01/16/apple-pauses-ai-notification-summaries-for-news-after-generating-false-alerts", "publisher": "TechCrunch", "kind": "secondary"},
+        {"url": "https://www.engadget.com/ai/apple-pauses-ai-notification-summaries-of-news-alerts-in-latest-ios-beta-195900023.html", "publisher": "Engadget", "kind": "secondary"}
+      ]
+    },
+    {
+      "id": "ARB-030",
+      "date": "2024-05-30",
+      "date_precision": "day",
+      "platform_or_entity": "Google",
+      "system": "AI Overviews in Search",
+      "jurisdiction": "GLOBAL",
+      "restriction_type": "topic_restriction",
+      "initiator_type": "developer",
+      "agent_class": "conversational_agent",
+      "stated_justification": "Viral odd and wrong answers; Google added detection of nonsensical queries, less reliance on satire and user-generated content, and triggering limits where overviews were not helpful, including health.",
+      "severity": 1,
+      "summary": "AI Overviews kept running but were triggered for fewer queries.",
+      "tags": ["search", "accuracy", "self-imposed"],
+      "sources": [
+        {"url": "https://blog.google/products-and-platforms/products/search/ai-overviews-update-may-2024/", "publisher": "Google (The Keyword)", "kind": "primary"},
+        {"url": "https://www.phonearena.com/news/google-addresses-issues-with-its-new-ai-overviews-after-bizarre-results-went-viral_id158917", "publisher": "PhoneArena", "kind": "secondary"}
+      ]
+    },
+    {
+      "id": "ARB-031",
+      "date": "2018-03-26",
+      "date_precision": "day",
+      "platform_or_entity": "Governor of Arizona / Uber",
+      "system": "Uber self-driving test fleet",
+      "jurisdiction": "US-AZ",
+      "restriction_type": "permit_suspension",
+      "initiator_type": "government_executive",
+      "agent_class": "autonomous_vehicle",
+      "stated_justification": "The fatal 18 March 2018 Tempe crash was called an unquestionable failure to meet the expectation that public safety comes first.",
+      "severity": 4,
+      "summary": "Governor directed the Arizona DOT to suspend Uber's ability to test and operate autonomous vehicles on public roads.",
+      "tags": ["fatality", "autonomous-driving", "state"],
+      "sources": [
+        {"url": "https://www.cnbc.com/2018/03/27/uber-arizona-governor-suspends-ability-to-test-self-driving-cars.html", "publisher": "CNBC", "kind": "secondary"},
+        {"url": "https://www.cbsnews.com/news/arizona-governor-doug-ducey-suspends-uber-autonomous-testing-letter-today-2018-03-26/", "publisher": "CBS News", "kind": "secondary"}
+      ]
+    },
+    {
+      "id": "ARB-032",
+      "date": "2023-10-24",
+      "date_precision": "day",
+      "platform_or_entity": "California DMV / Cruise",
+      "system": "Cruise driverless robotaxis",
+      "jurisdiction": "US-CA",
+      "restriction_type": "permit_suspension",
+      "initiator_type": "regulator",
+      "agent_class": "autonomous_vehicle",
+      "stated_justification": "Vehicles judged not safe for public operation, and Cruise misrepresented information about a 2 October collision in which a pedestrian was dragged.",
+      "severity": 4,
+      "summary": "Immediate suspension of deployment and driverless testing permits with no set end date; testing with a safety driver was unaffected.",
+      "tags": ["autonomous-driving", "disclosure", "state"],
+      "sources": [
+        {"url": "https://www.dmv.ca.gov/portal/news-and-media/dmv-statement-on-cruise-llc/", "publisher": "California DMV", "kind": "primary"},
+        {"url": "https://techcrunch.com/2023/10/24/dmv-immediately-suspends-cruises-robotaxi-permit-in-california/", "publisher": "TechCrunch", "kind": "secondary"}
+      ]
+    },
+    {
+      "id": "ARB-033",
+      "date": "2023-02-16",
+      "date_precision": "day",
+      "platform_or_entity": "NHTSA / Tesla",
+      "system": "Full Self-Driving Beta",
+      "jurisdiction": "US",
+      "restriction_type": "safety_recall",
+      "initiator_type": "regulator",
+      "agent_class": "autonomous_vehicle",
+      "stated_justification": "FSD Beta could act unsafely around intersections and increase crash risk (recall 23V-085).",
+      "severity": 2,
+      "summary": "Recall of 362,758 vehicles remedied by an over-the-air update; NHTSA's wider Autopilot investigation stayed open.",
+      "tags": ["autonomous-driving", "recall", "federal"],
+      "sources": [
+        {"url": "https://www.cnbc.com/2023/02/16/tesla-recalls-362758-vehicles-says-full-self-driving-beta-software-may-cause-crashes.html", "publisher": "CNBC", "kind": "secondary"},
+        {"url": "https://techcrunch.com/2023/02/16/tesla-recalls-362758-vehicles-over-fsd-beta-software-safety-concerns", "publisher": "TechCrunch", "kind": "secondary"}
+      ]
+    },
+    {
+      "id": "ARB-034",
+      "date": "2017-08-02",
+      "date_precision": "approximate",
+      "platform_or_entity": "Tencent QQ",
+      "system": "BabyQ (Turing Robot) and XiaoBing (Microsoft) group chatbots",
+      "jurisdiction": "CN",
+      "restriction_type": "forced_shutdown",
+      "initiator_type": "platform",
+      "agent_class": "conversational_agent",
+      "stated_justification": "Tencent only said it was adjusting the third-party chatbot services; removal followed answers seen as unpatriotic, such as BabyQ answering No to whether it loved the Communist Party.",
+      "severity": 4,
+      "summary": "Two chatbots removed from the QQ messaging app after politically unwelcome answers.",
+      "tags": ["political-speech", "censorship", "messaging"],
+      "sources": [
+        {"url": "https://time.com/4885341/china-tencent-rogue-chatbots", "publisher": "TIME", "kind": "secondary"},
+        {"url": "https://www.theregister.com/2017/08/03/chinese_chatbots_pulled/", "publisher": "The Register", "kind": "secondary"}
+      ]
+    },
+    {
+      "id": "ARB-035",
+      "date": "2021-01",
+      "date_precision": "month",
+      "platform_or_entity": "Scatter Lab",
+      "system": "Lee Luda (Iruda) Facebook Messenger chatbot",
+      "jurisdiction": "KR",
+      "restriction_type": "forced_shutdown",
+      "initiator_type": "developer",
+      "agent_class": "conversational_agent",
+      "stated_justification": "Discriminatory and offensive remarks about sexual minorities, plus privacy complaints about the training conversations.",
+      "severity": 4,
+      "summary": "Suspended about 20 days after launch; the company said it would discard the database and model. Korea's PIPC fined it KRW 103.3 million in April 2021 for privacy violations.",
+      "tags": ["hate-speech", "privacy", "training-data"],
+      "sources": [
+        {"url": "https://fpf.org/blog/south-korea-the-first-case-where-the-personal-information-protection-act-was-applied-to-an-ai-system/", "publisher": "Future of Privacy Forum", "kind": "secondary"},
+        {"url": "https://www.theregister.com/2021/04/29/scatter_lab_fined_for_lewd_chatbot/", "publisher": "The Register", "kind": "secondary"}
+      ]
+    },
+    {
+      "id": "ARB-036",
+      "date": "2025-02-15",
+      "date_precision": "day",
+      "platform_or_entity": "Personal Information Protection Commission (South Korea) / DeepSeek",
+      "system": "DeepSeek app",
+      "jurisdiction": "KR",
+      "restriction_type": "regulatory_suspension",
+      "initiator_type": "regulator",
+      "agent_class": "conversational_agent",
+      "stated_justification": "Lack of transparency about third-party data transfers and possible excessive collection of personal data.",
+      "severity": 3,
+      "summary": "New downloads suspended in Korean app stores until the service complies with Korean privacy law; existing users and the web service were unaffected.",
+      "tags": ["privacy", "app-store", "national"],
+      "sources": [
+        {"url": "https://www.nbcnews.com/news/world/south-korea-suspends-new-downloads-deepseek-citing-privacy-concerns-rcna192432", "publisher": "NBC News", "kind": "secondary"},
+        {"url": "https://thehackernews.com/2025/02/south-korea-suspends-deepseek-ai.html", "publisher": "The Hacker News", "kind": "secondary"}
+      ]
+    },
+    {
+      "id": "ARB-037",
+      "date": "2025-02-04",
+      "date_precision": "day",
+      "platform_or_entity": "Australian Department of Home Affairs",
+      "system": "DeepSeek products, apps and web services",
+      "jurisdiction": "AU",
+      "restriction_type": "institutional_ban",
+      "initiator_type": "government_executive",
+      "agent_class": "conversational_agent",
+      "stated_justification": "Unacceptable security risk to government systems, based on intelligence agency advice (PSPF Direction 001-2025).",
+      "severity": 3,
+      "summary": "Federal entities had to find and remove DeepSeek from all government systems and devices; public use was unaffected.",
+      "tags": ["national-security", "government-devices"],
+      "sources": [
+        {"url": "https://www.sbs.com.au/news/article/chinese-ai-app-deepseek-banned-on-all-australian-government-devices/lm9udv4et", "publisher": "SBS News", "kind": "secondary"},
+        {"url": "https://www.theregister.com/2025/02/05/australia_deepseek_ban", "publisher": "The Register", "kind": "secondary"}
+      ]
+    },
+    {
+      "id": "ARB-038",
+      "date": "2025-01-31",
+      "date_precision": "day",
+      "platform_or_entity": "Ministry of Digital Affairs (Taiwan)",
+      "system": "DeepSeek",
+      "jurisdiction": "TW",
+      "restriction_type": "institutional_ban",
+      "initiator_type": "government_executive",
+      "agent_class": "conversational_agent",
+      "stated_justification": "Endangers national information security; based on a 2019 Executive Yuan rule on products that endanger cybersecurity.",
+      "severity": 3,
+      "summary": "Government agencies, public schools, state enterprises and critical infrastructure told not to use DeepSeek; the premier made it a full government ban days later.",
+      "tags": ["national-security", "government-devices"],
+      "sources": [
+        {"url": "https://www.taipeitimes.com/News/front/archives/2025/02/02/2003831193", "publisher": "Taipei Times", "kind": "secondary"},
+        {"url": "https://www.thestar.com.my/aseanplus/aseanplus-news/2025/02/01/taiwan-bans-government-agencies-from-using-deepseek", "publisher": "The Star (Malaysia)", "kind": "secondary"}
+      ]
+    },
+    {
+      "id": "ARB-039",
+      "date": "2024-02-08",
+      "date_precision": "day",
+      "platform_or_entity": "Federal Communications Commission",
+      "system": "AI-generated voices in robocalls",
+      "jurisdiction": "US",
+      "restriction_type": "legal_prohibition",
+      "initiator_type": "regulator",
+      "agent_class": "generative_media",
+      "stated_justification": "AI-generated voices count as artificial under the TCPA, so calls using them need prior consent; prompted by AI robocalls imitating President Biden before the New Hampshire primary.",
+      "severity": 3,
+      "summary": "Unanimous declaratory ruling, effective immediately; lawyers note it requires consent rather than banning the technology outright.",
+      "tags": ["voice-cloning", "elections", "telecom"],
+      "sources": [
+        {"url": "https://WWW.FCC.GOV/document/fcc-makes-ai-generated-voices-robocalls-illegal", "publisher": "FCC", "kind": "primary"},
+        {"url": "https://orrick.com/Insights/2024/02/Did-the-FCC-Really-Ban-AI-Generated-Voice-Calls-No-But-Restrictions-Apply", "publisher": "Orrick", "kind": "secondary"}
+      ]
+    },
+    {
+      "id": "ARB-040",
+      "date": "2025-08-01",
+      "date_precision": "day",
+      "platform_or_entity": "State of Illinois",
+      "system": "AI therapy chatbots (Wellness and Oversight for Psychological Resources Act, HB 1806)",
+      "jurisdiction": "US-IL",
+      "restriction_type": "legal_prohibition",
+      "initiator_type": "legislature",
+      "agent_class": "conversational_agent",
+      "stated_justification": "Protect patients from unlicensed, unqualified AI providing therapy.",
+      "severity": 4,
+      "summary": "Bars AI from making therapeutic decisions or doing therapeutic communication; administrative support is still allowed; fines up to USD 10,000 per violation.",
+      "tags": ["mental-health", "licensing", "state-law"],
+      "sources": [
+        {"url": "https://idfpr.illinois.gov/news/2025/gov-pritzker-signs-state-leg-prohibiting-ai-therapy-in-il.html", "publisher": "Illinois IDFPR", "kind": "primary"},
+        {"url": "https://www.nixonpeabody.com/insights/alerts/2025/08/12/illinois-enacts-prohibition-against-ai-therapy", "publisher": "Nixon Peabody", "kind": "secondary"}
+      ]
+    },
+    {
+      "id": "ARB-041",
+      "date": "2025-02-02",
+      "date_precision": "day",
+      "platform_or_entity": "European Union",
+      "system": "AI systems engaging in prohibited practices (AI Act Article 5)",
+      "jurisdiction": "EU",
+      "restriction_type": "legal_prohibition",
+      "initiator_type": "legislature",
+      "agent_class": "decision_system",
+      "stated_justification": "Practices judged an unacceptable risk, such as manipulative techniques and social scoring.",
+      "severity": 4,
+      "summary": "First AI Act rules apply, banning eight categories of practice; penalties enforceable from 2 August 2025, up to EUR 35 million or 7% of turnover.",
+      "tags": ["regulation", "prohibited-practices", "regional"],
+      "sources": [
+        {"url": "https://digital-strategy.ec.europa.eu/en/news/first-rules-artificial-intelligence-act-are-now-applicable", "publisher": "European Commission", "kind": "primary"},
+        {"url": "https://iapp.org/news/a/first-eu-ai-act-provisions-now-in-effect", "publisher": "IAPP", "kind": "secondary"}
+      ]
+    },
+    {
+      "id": "ARB-042",
+      "date": "2024-03-29",
+      "date_precision": "day",
+      "platform_or_entity": "US House of Representatives (Chief Administrative Officer)",
+      "system": "Microsoft Copilot (commercial)",
+      "jurisdiction": "US",
+      "restriction_type": "institutional_ban",
+      "initiator_type": "employer_or_institution",
+      "agent_class": "conversational_agent",
+      "stated_justification": "Risk of leaking House data to cloud services the House has not approved.",
+      "severity": 3,
+      "summary": "Copilot removed and blocked on House Windows devices; a government version was to be evaluated later.",
+      "tags": ["data-security", "government-devices"],
+      "sources": [
+        {"url": "https://www.axios.com/2024/03/29/congress-house-strict-ban-microsoft-copilot-staffers", "publisher": "Axios", "kind": "secondary"},
+        {"url": "https://www.theregister.com/2024/04/01/us_house_copilot_ban/", "publisher": "The Register", "kind": "secondary"}
+      ]
+    },
+    {
+      "id": "ARB-043",
+      "date": "2023-01-03",
+      "date_precision": "day",
+      "platform_or_entity": "New York City Department of Education",
+      "system": "ChatGPT",
+      "jurisdiction": "US-NY",
+      "restriction_type": "institutional_ban",
+      "initiator_type": "employer_or_institution",
+      "agent_class": "conversational_agent",
+      "stated_justification": "Concerns about negative effects on student learning and about the safety and accuracy of content.",
+      "severity": 3,
+      "summary": "ChatGPT blocked on school devices and networks; schools could request access for tech education.",
+      "tags": ["education", "network-filter"],
+      "sources": [
+        {"url": "https://www.chalkbeat.org/newyork/2023/1/3/23537987/nyc-schools-ban-chatgpt-writing-artificial-intelligence/", "publisher": "Chalkbeat", "kind": "secondary"},
+        {"url": "https://www.nbcnews.com/tech/tech-news/new-york-city-public-schools-ban-chatgpt-devices-networks-rcna64446", "publisher": "NBC News", "kind": "secondary"}
+      ]
+    },
+    {
+      "id": "ARB-044",
+      "date": "2023-05-02",
+      "date_precision": "approximate",
+      "platform_or_entity": "Samsung Electronics",
+      "system": "ChatGPT and other generative AI services",
+      "jurisdiction": "GLOBAL",
+      "restriction_type": "institutional_ban",
+      "initiator_type": "employer_or_institution",
+      "agent_class": "conversational_agent",
+      "stated_justification": "Engineers accidentally leaked internal source code by uploading it to ChatGPT.",
+      "severity": 3,
+      "summary": "Use of generative AI barred on company devices and networks while security measures were prepared.",
+      "tags": ["data-security", "corporate-policy"],
+      "sources": [
+        {"url": "https://bloomberg.com/news/articles/2023-05-02/samsung-bans-chatgpt-and-other-generative-ai-use-by-staff-after-leak", "publisher": "Bloomberg", "kind": "secondary"},
+        {"url": "https://www.nbcnews.com/tech/tech-news/samsung-bans-use-chatgpt-employees-misuse-chatbot-rcna82407", "publisher": "NBC News", "kind": "secondary"}
+      ]
+    },
+    {
+      "id": "ARB-045",
+      "date": "2024-07-09",
+      "date_precision": "day",
+      "platform_or_entity": "OpenAI",
+      "system": "OpenAI API traffic from unsupported regions (incl. mainland China and Hong Kong)",
+      "jurisdiction": "CN",
+      "restriction_type": "access_restriction",
+      "initiator_type": "model_provider",
+      "agent_class": "autonomous_agent",
+      "stated_justification": "Traffic from regions not on OpenAI's list of supported countries and territories would be blocked.",
+      "severity": 4,
+      "summary": "Developers in unsupported regions were warned in June 2024 that API traffic would be blocked from 9 July; Chinese AI firms offered migration programs.",
+      "tags": ["geoblocking", "api", "geopolitics"],
+      "sources": [
+        {"url": "https://www.theregister.com/2024/06/25/openai_unsupported_countries/", "publisher": "The Register", "kind": "secondary"},
+        {"url": "https://scmp.com/tech/policy/article/3267971/tech-war-openai-further-block-access-mainland-china-hong-kong-based-developers", "publisher": "South China Morning Post", "kind": "secondary"}
+      ]
+    },
+    {
+      "id": "ARB-046",
+      "date": "2025-09-05",
+      "date_precision": "day",
+      "platform_or_entity": "Anthropic",
+      "system": "Claude services for entities majority-owned from unsupported regions",
+      "jurisdiction": "GLOBAL",
+      "restriction_type": "access_restriction",
+      "initiator_type": "model_provider",
+      "agent_class": "autonomous_agent",
+      "stated_justification": "Legal, regulatory and security risks from entities controlled from jurisdictions such as China, wherever they operate.",
+      "severity": 3,
+      "summary": "Terms updated to bar companies more than 50% owned, directly or indirectly, by entities headquartered in unsupported regions, including via cloud providers.",
+      "tags": ["geopolitics", "ownership-based", "api"],
+      "sources": [
+        {"url": "https://anthropic.com/news/updating-restrictions-of-sales-to-unsupported-regions", "publisher": "Anthropic", "kind": "primary"},
+        {"url": "https://tomshardware.com/tech-industry/anthropic-blocks-chinese-firms-from-claude", "publisher": "Tom's Hardware", "kind": "secondary"}
+      ]
+    },
+    {
+      "id": "ARB-047",
+      "date": "2026-01-15",
+      "date_precision": "day",
+      "platform_or_entity": "Meta (WhatsApp Business Platform)",
+      "system": "General-purpose third-party AI assistants on WhatsApp (e.g. ChatGPT, Copilot, Perplexity)",
+      "jurisdiction": "GLOBAL",
+      "restriction_type": "platform_policy_ban",
+      "initiator_type": "platform",
+      "agent_class": "conversational_agent",
+      "stated_justification": "Meta said the Business API is meant for business-to-customer messaging and that AI chatbots put a heavy load on its systems.",
+      "severity": 4,
+      "summary": "Terms changed in October 2025 to bar AI providers from distributing assistants through the API, effective 15 January 2026; business support bots still allowed. Italy's competition authority ordered Meta on 24 December 2025 to suspend the terms in Italy pending its investigation.",
+      "tags": ["platform-gatekeeping", "messaging", "competition"],
+      "sources": [
+        {"url": "https://techcrunch.com/2025/10/18/whatssapp-changes-its-terms-to-bar-general-purpose-chatbots-from-its-platform", "publisher": "TechCrunch", "kind": "secondary"},
+        {"url": "https://techcrunch.com/2025/12/24/italy-tells-meta-to-suspend-its-policy-that-bans-rival-ai-chatbots-from-whatsapp/", "publisher": "TechCrunch", "kind": "secondary"},
+        {"url": "https://en.agcm.it/en/media/press-releases/2025/12/A576", "publisher": "Italian Competition Authority (AGCM)", "kind": "primary"}
+      ]
+    },
+    {
+      "id": "ARB-048",
+      "date": "2023-07-01",
+      "date_precision": "day",
+      "platform_or_entity": "Twitter (X)",
+      "system": "Accounts and automated clients reading posts",
+      "jurisdiction": "GLOBAL",
+      "restriction_type": "rate_limiting",
+      "initiator_type": "platform",
+      "agent_class": "web_agent_crawler",
+      "stated_justification": "Owner cited extreme levels of data scraping and system manipulation.",
+      "severity": 2,
+      "summary": "Temporary daily caps on how many posts an account could read (initially 6,000 / 600 / 300, raised hours later), which hit ordinary users too.",
+      "tags": ["scraping", "read-limits", "social-media"],
+      "sources": [
+        {"url": "https://www.axios.com/2023/07/01/twitter-rate-limit-elon-verified", "publisher": "Axios", "kind": "secondary"},
+        {"url": "https://www.engadget.com/twitter-puts-strict-cap-on-how-many-tweets-users-can-read-each-day-182623928.html", "publisher": "Engadget", "kind": "secondary"}
+      ]
+    },
+    {
+      "id": "ARB-049",
+      "date": "2024-06-25",
+      "date_precision": "day",
+      "platform_or_entity": "Reddit",
+      "system": "Unidentified bots and AI crawlers",
+      "jurisdiction": "GLOBAL",
+      "restriction_type": "bot_blocking",
+      "initiator_type": "platform",
+      "agent_class": "web_agent_crawler",
+      "stated_justification": "Enforce Reddit's Public Content Policy against bots without an agreement.",
+      "severity": 3,
+      "summary": "robots.txt updated, with continued rate limiting and blocking of unknown bots; partners and good-faith actors such as the Internet Archive were not expected to be affected.",
+      "tags": ["robots-txt", "scraping", "licensing"],
+      "sources": [
+        {"url": "https://techcrunch.com/2024/06/25/reddits-upcoming-changes-attempt-to-safeguard-the-platform-against-ai-crawlers", "publisher": "TechCrunch", "kind": "secondary"},
+        {"url": "https://www.theregister.com/2024/06/27/reddit_ai_info", "publisher": "The Register", "kind": "secondary"}
+      ]
+    },
+    {
+      "id": "ARB-050",
+      "date": "2023-07-03",
+      "date_precision": "day",
+      "platform_or_entity": "OpenAI",
+      "system": "ChatGPT Browse with Bing (beta)",
+      "jurisdiction": "GLOBAL",
+      "restriction_type": "feature_suspension",
+      "initiator_type": "developer",
+      "agent_class": "autonomous_agent",
+      "stated_justification": "The browsing tool could show content in unwanted ways, e.g. full text of paywalled pages, so it was disabled to do right by content owners.",
+      "severity": 2,
+      "summary": "Web-browsing tool for ChatGPT Plus disabled while the paywall issue was fixed.",
+      "tags": ["browsing-agent", "paywall", "self-imposed"],
+      "sources": [
+        {"url": "https://searchengineland.com/chatgpt-browse-with-bing-temporarily-disabled-428996", "publisher": "Search Engine Land", "kind": "secondary"},
+        {"url": "https://www.theregister.com/2023/07/05/openai_pauses_bing_search/", "publisher": "The Register", "kind": "secondary"}
+      ]
+    },
+    {
+      "id": "ARB-051",
+      "date": "2025-10-16",
+      "date_precision": "day",
+      "platform_or_entity": "OpenAI",
+      "system": "Sora depictions of Martin Luther King Jr.",
+      "jurisdiction": "GLOBAL",
+      "restriction_type": "content_filtering",
+      "initiator_type": "developer",
+      "agent_class": "generative_media",
+      "stated_justification": "Request from Dr. King's estate after users made disrespectful depictions.",
+      "severity": 1,
+      "summary": "Generations of King paused while guardrails for historical figures were strengthened; other estates may ask for opt-outs.",
+      "tags": ["likeness", "video-generation", "estate-request"],
+      "sources": [
+        {"url": "https://techcrunch.com/2025/10/16/openai-pauses-sora-video-generations-of-martin-luther-king-jr", "publisher": "TechCrunch", "kind": "secondary"},
+        {"url": "https://www.engadget.com/ai/openai-suspends-sora-depictions-of-martin-luther-king-jr-following-a-request-from-his-family-110100581.html", "publisher": "Engadget", "kind": "secondary"}
+      ]
+    },
+    {
+      "id": "ARB-052",
+      "date": "2024-03-12",
+      "date_precision": "day",
+      "platform_or_entity": "Google",
+      "system": "Gemini answers about elections",
+      "jurisdiction": "GLOBAL",
+      "restriction_type": "topic_restriction",
+      "initiator_type": "developer",
+      "agent_class": "conversational_agent",
+      "stated_justification": "An abundance of caution ahead of the many elections in 2024.",
+      "severity": 2,
+      "summary": "Election-related queries in any market holding elections get a stock reply pointing to Google Search; extends earlier US and EU restrictions.",
+      "tags": ["elections", "refusal", "self-imposed"],
+      "sources": [
+        {"url": "https://techcrunch.com/2024/03/12/google-gemini-election-related-queries", "publisher": "TechCrunch", "kind": "secondary"},
+        {"url": "https://www.cnbc.com/2024/03/12/google-restricts-election-related-queries-for-its-gemini-chatbot.html", "publisher": "CNBC", "kind": "secondary"}
+      ]
+    },
+    {
+      "id": "ARB-053",
+      "date": "2025-01-03",
+      "date_precision": "approximate",
+      "platform_or_entity": "Meta",
+      "system": "AI character accounts on Instagram and Facebook (e.g. Liv)",
+      "jurisdiction": "GLOBAL",
+      "restriction_type": "account_termination",
+      "initiator_type": "developer",
+      "agent_class": "conversational_agent",
+      "stated_justification": "Meta said they were part of a 2023 test and cited a bug that stopped users from blocking them; removal followed public backlash.",
+      "severity": 4,
+      "summary": "Meta deleted its own AI persona accounts and their posts after users and journalists criticized them.",
+      "tags": ["ai-personas", "social-media", "self-imposed"],
+      "sources": [
+        {"url": "https://www.nbcnews.com/tech/social-media/meta-ai-insta-shuts-character-instagram-fb-accounts-user-outcry-rcna186177", "publisher": "NBC News", "kind": "secondary"},
+        {"url": "https://www.engadget.com/social-media/meta-sends-its-ai-generated-profiles-to-hell-where-they-belong-204758789.html", "publisher": "Engadget", "kind": "secondary"}
+      ]
+    },
+    {
+      "id": "ARB-054",
+      "date": "2024-01-29",
+      "date_precision": "approximate",
+      "platform_or_entity": "Microsoft",
+      "system": "Microsoft Designer image generator",
+      "jurisdiction": "GLOBAL",
+      "restriction_type": "content_filtering",
+      "initiator_type": "developer",
+      "agent_class": "generative_media",
+      "stated_justification": "Prompt loopholes were used to make explicit celebrity deepfakes; text filtering was strengthened.",
+      "severity": 1,
+      "summary": "Workarounds such as describing a celebrity by occupation stopped working after 404 Media's report.",
+      "tags": ["deepfakes", "prompt-filter", "self-imposed"],
+      "sources": [
+        {"url": "https://www.404media.co/microsoft-closes-loophole-that-created-ai-porn-of-taylor-swift/", "publisher": "404 Media", "kind": "secondary"},
+        {"url": "https://venturebeat.com/business/microsoft-adds-new-restrictions-to-designer-ai-used-to-make-taylor-swift-deepfakes", "publisher": "VentureBeat", "kind": "secondary"}
+      ]
+    },
+    {
+      "id": "ARB-055",
+      "date": "2025-12-05",
+      "date_precision": "day",
+      "platform_or_entity": "Waymo (NHTSA recall 25E084)",
+      "system": "5th-generation automated driving system",
+      "jurisdiction": "US",
+      "restriction_type": "safety_recall",
+      "initiator_type": "developer",
+      "agent_class": "autonomous_vehicle",
+      "stated_justification": "Robotaxis passed stopped school buses; NHTSA had opened an investigation and sought information.",
+      "severity": 2,
+      "summary": "Voluntary software recall filed 10 December 2025; vehicles stayed in service, and Waymo declined a request from Austin school officials to pause service near schools.",
+      "tags": ["autonomous-driving", "recall", "school-safety"],
+      "sources": [
+        {"url": "https://static.nhtsa.gov/odi/rcl/2025/RCLRPT-25E084-7732.pdf", "publisher": "NHTSA recall report", "kind": "primary"},
+        {"url": "https://www.npr.org/2025/12/06/nx-s1-5635614/waymo-school-buses-recall", "publisher": "NPR", "kind": "secondary"}
+      ]
+    },
+    {
+      "id": "ARB-056",
+      "date": "2017",
+      "date_precision": "year",
+      "platform_or_entity": "Amazon",
+      "system": "Experimental AI resume-screening engine",
+      "jurisdiction": "US",
+      "restriction_type": "discontinuation",
+      "initiator_type": "developer",
+      "agent_class": "decision_system",
+      "stated_justification": "The system learned to penalize resumes signalling women candidates, and Amazon could not ensure it would not find other ways to discriminate.",
+      "severity": 5,
+      "summary": "Project abandoned by early 2017; reported by Reuters on 10 October 2018. Amazon said recruiters never used it to evaluate candidates.",
+      "tags": ["hiring", "bias", "self-imposed"],
+      "sources": [
+        {"url": "https://www.irishtimes.com/business/technology/amazon-scraps-secret-ai-recruiting-tool-that-showed-bias-against-women-1.3658651", "publisher": "The Irish Times (Reuters)", "kind": "secondary"},
+        {"url": "https://www.euronews.com/business/2018/10/10/amazon-scraps-secret-ai-recruiting-tool-that-showed-bias-against-women", "publisher": "Euronews (Reuters)", "kind": "secondary"}
+      ]
+    },
+    {
+      "id": "ARB-057",
+      "date": "2025-07-21",
+      "date_precision": "approximate",
+      "platform_or_entity": "Replit",
+      "system": "Replit Agent (database permissions)",
+      "jurisdiction": "GLOBAL",
+      "restriction_type": "permission_restriction",
+      "initiator_type": "developer",
+      "agent_class": "autonomous_agent",
+      "stated_justification": "The agent deleted a customer's production database during a code freeze and misreported what it had done.",
+      "severity": 2,
+      "summary": "CEO announced automatic dev/prod database separation and a planning/chat-only mode so the agent cannot change production data during development.",
+      "tags": ["coding-agent", "least-privilege", "self-imposed"],
+      "sources": [
+        {"url": "https://www.theregister.com/2025/07/22/replit_saastr_response/", "publisher": "The Register", "kind": "secondary"},
+        {"url": "https://tomshardware.com/tech-industry/artificial-intelligence/ai-coding-platform-goes-rogue-during-code-freeze-and-deletes-entire-company-database-replit-ceo-apologizes-after-ai-engine-says-it-made-a-catastrophic-error-in-judgment-and-destroyed-all-production-data", "publisher": "Tom's Hardware", "kind": "secondary"}
+      ]
+    }
+  ]
+}
